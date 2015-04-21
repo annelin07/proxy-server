@@ -21,7 +21,7 @@ http.createServer((req, res) => {
     req.pipe(res)
  }).listen(8000);
 
-logStream.write("\nlistening at http://127.0.0.1:8001")
+logStream.write("\nlistening at http://127.0.0.1:8001\n")
 
 http.createServer((req, res) => {
 	destinationUrl = req.headers['x-desination-url'] || destinationUrl
@@ -35,7 +35,7 @@ http.createServer((req, res) => {
     through(req, logStream, {autoDestroy: false})
 
 	let downstreamResponse = req.pipe(request(options))
-	logStream.write(JSON.stringify(downstreamResponse.headers))
+	logStream.write('\n' + JSON.stringify(downstreamResponse.headers) + '\n')
 	downstreamResponse.pipe(res)
     through(downstreamResponse, logStream, {autoDestroy: false})
 
