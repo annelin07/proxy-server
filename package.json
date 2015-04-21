@@ -12,6 +12,7 @@
   "dependencies": {
     "fs": "0.0.2",
     "request": "^2.55.0",
+    "through": "^2.3.7",
     "yargs": "^3.7.2"
   }
 }
