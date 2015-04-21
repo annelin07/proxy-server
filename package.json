@@ -1,0 +1,17 @@
+{
+  "name": "proxy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- index.js --host 127.0.0.1  --port 8000  --url 127.0.0.1:8000 --log proxy-server.log",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.2",
+    "request": "^2.55.0",
+    "yargs": "^3.7.2"
+  }
+}
