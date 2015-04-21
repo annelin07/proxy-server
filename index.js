@@ -9,7 +9,6 @@ let scheme = 'http://'
 let port = argv.port || argv.host === '127.0.0.1' ? '8000' : '80'
 let destinationUrl = argv.url || scheme + argv.host + ':' + port
 let logStream = argv.log ? fs.createWriteStream(argv.log) : process.stdout
- logStream.write('\n' + logStream instanceof WriteStream);
 
 console.log(logStream);
 http.createServer((req, res) => {
@@ -40,11 +39,3 @@ http.createServer((req, res) => {
 }).listen(8001);
 
 
-
-function logMessage(level, stream) {
-    // Your code here
-}
-
-function logMessage(level, message) {
-    // Your code here
-}
