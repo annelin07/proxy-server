@@ -5,11 +5,12 @@ let through = require('through')
 let argv = require('yargs')
 	.default({host: '127.0.0.1'})
     .argv   
-//	.default({host: '127.0.0.1', port: '8000', url: '127.0.0.1:8000', log: 'proxy-server.log'})
 let scheme = 'http://'
 let port = argv.port || argv.host === '127.0.0.1' ? '8000' : '80'
 let destinationUrl = argv.url || scheme + argv.host + ':' + port
-let logStream = argv.log ? fs.createWriteStream(argv.log) : process.stdout
+let logStream = argv.lf ? fs.createWriteStream(argv.lf) : process.stdout
+// logStream.write(JSON.stringify(argv))
+// logStream.write(destinationUrl)
 
 http.createServer((req, res) => {
     logStream.write('\nEcho request: \n' + JSON.stringify(req.headers) + '\n')
@@ -20,7 +21,7 @@ http.createServer((req, res) => {
     req.pipe(res)
  }).listen(8000);
 
-logStream.write("listening at http://127.0.0.1:8001")
+logStream.write("\nlistening at http://127.0.0.1:8001")
 
 http.createServer((req, res) => {
 	destinationUrl = req.headers['x-desination-url'] || destinationUrl
