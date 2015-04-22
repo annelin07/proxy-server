@@ -18,3 +18,4 @@ Time spent: [8hrs, including setting up environment, coding, testing, recording 
 * [todo] Optional: `-h` argument prints CLI API
 
 ##Recording of achievements as gif:
+[![solarized dualmode](https://github.com/annelin07/proxy-server/blob/master/proxy-server-record.gif)](#features)
