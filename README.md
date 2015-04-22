@@ -17,4 +17,4 @@ Time spent: [8hrs, including setting up environment, coding, testing, recording 
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
 
-![Video Walkthrough](proxy-server-record.gif)
+![Video Walkthrough](https://github.com/annelin07/proxy-server/blob/master/proxy-server-record.gif)
