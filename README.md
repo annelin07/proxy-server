@@ -12,7 +12,7 @@ Time spent: [8hrs, including setting up environment, coding, testing, recording 
 * [done] Required: The destination server is configurable via the `x-destination-url` header
 * [done] Required: Client requests and respones are printed to stdout
 * [done] Required: The `--logfile` argument outputs all logs to the file specified instead of stdout
-* [todo] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
+* [done] Optional: The `--exec` argument proxies stdin/stdout to/from the destination program
 * [todo] Optional: The `--loglevel` argument sets the logging chattiness
 * [todo] Optional: Supports HTTPS
 * [todo] Optional: `-h` argument prints CLI API
